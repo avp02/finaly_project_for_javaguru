@@ -18,7 +18,4 @@ public class User {
     private Integer id;
     @Column(name = "name")
     private String name;
-
-
-
 }
