@@ -3,19 +3,21 @@
 <head>
     <title>Список пользователей</title>
 </head>
-<body align="center">
+<body th:align="center">
 <h1>Весь список пользователей</h1>
 <table class="table" align="center">
 <tr>
-    <th align="center">ID</th>
-    <th align="center">имя</th>
+    <th th:align="center">ID</th>
+    <th th:align="center">имя</th>
 </tr>
 <th:block th:each="user : ${allUsers}">
     <tr>
-    <th align="center" th:text="${user.id}"></th>
-    <th align="center" th:text="${user.name}"></th>
+    <th th:align="center" th:text="${user.id}"></th>
+    <th th:align="center" th:text="${user.name}"></th>
     </tr>
 </th:block>
 </table>
+<br>
+<a href="/add">добавить пользователя</a>
 </body>
 </html>
