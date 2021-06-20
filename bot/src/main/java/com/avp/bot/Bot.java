@@ -32,8 +32,13 @@ public class Bot extends TelegramLongPollingBot {
     public String getBotToken() {
         return token;
     }
-    @Autowired
+
     private UserService userService;
+
+    @Autowired
+    public void setUserService (UserService userService) {
+        this.userService = userService;
+    }
 
     @Override
     public void onUpdateReceived(Update update) {
